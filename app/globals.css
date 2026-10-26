@@ -61,14 +61,10 @@ p { margin: 0; }
   padding: 8px 10px 8px 14px;
   box-shadow: 0 10px 40px rgba(31,38,43,.08);
 }
-.brand { display: flex; align-items: center; gap: 10px; min-width: 180px; }
-.brand-mark {
-  width: 42px; height: 42px; border-radius: 50%;
-  background: radial-gradient(circle at 40% 30%, #ff8a55, var(--orange) 55%, var(--orange-deep));
-  display: grid; place-items: center; color: white; flex: none;
-}
-.brand b { display: block; font-size: 14px; letter-spacing: .12em; }
-.brand small { display: block; color: var(--muted); letter-spacing: .14em; font-size: 10px; }
+.brand { display: block; flex: none; }
+.brand-logo { display: block; width: 138px; height: auto; }
+.brand-light { width: max-content; padding: 4px 8px; border-radius: 10px; background: white; }
+.brand-light .brand-logo { width: 170px; }
 .nav-links { display: flex; gap: 4px; margin: 0 auto; }
 .nav-links a, .menu-panel a {
   padding: 8px 10px; border-radius: 999px; font-size: 14px; color: var(--slate);
@@ -308,6 +304,7 @@ th { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: v
   .nav-actions .phone-label { display: none; }
 }
 @media (max-width: 640px) {
+  .brand-logo { width: 112px; }
   .form-grid { grid-template-columns: 1fr; }
   .wrap { width: min(1180px, calc(100% - 28px)); }
   .hero-copy h1 { font-size: 42px; }
